@@ -7,5 +7,5 @@ async function getForecast(){
 }
 
 city.onclick = () => {
-    getForecast().then(v => console.log(` current temperature ${v.data[0].app_temp}`))
+    getForecast().then(v => console.log(` текущая температура ${v.data[0].app_temp}`))
 }
