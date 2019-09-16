@@ -1,0 +1,46 @@
+body{
+    font-family: 'Roboto Slab', serif;
+    background-color: #e4f5f5;
+}
+
+.description {
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-form {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+    display: flex;
+}
+
+.weather-form label{
+    padding-top: 15px;
+    padding-left: 12px;
+}
+
+.btn-city{
+    margin:0 auto;
+    margin-top: 30px;  
+}
+
+.weather-content{
+    margin: 0 auto;
+    max-width: 85%;
+}
+
+th,
+td{
+    text-align: center;
+}
+
+.table-display{
+    display:none
+}
+
+

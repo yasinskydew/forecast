@@ -5,11 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <input type="text" autocomplete="on">
-    <button id="city-input">Weather</button>
-    <script src="api-service.js"></script>
-    <script src="index.js"></script>
+  <div class="description">
+      <h1>Weather forecast</h1>
+      <p>Just choose your country and city and get a weather forecast for 16 days, which could be easier =)</p>
+  </div>
+  <div class="form-row weather-form">
+    <label for="country-input">Country</label>
+    <input name="country" class="form-control" id ='country-input' list="countries" placeholder="Belarus" autocomplete ="off" autofocus />
+    <datalist id="countries">
+    </datalist>
+    <label for="cities-input">City</label>
+    <input name="city" class="form-control" list="cities" id ='cities-input' placeholder="Minsk" autocomplete="off" />
+    <datalist id="cities">
+    </datalist>
+    <button id="city-input" class="btn btn-outline-primary btn-city">Weather</button>
+  </div>
+  <div class = "weather-content">
+    <table id="table" class="table table-striped table-display">
+        <thead>
+          <tr>
+            <th scope="col">date</th>
+            <th scope="col">temp current, C</th>
+            <th scope="col">temp max, C</th>
+            <th scope="col">temp min, C</th>
+            <th scope="col">wind direction</th>
+            <th scope="col">wind speed, m/s</th> 
+          </tr>
+        </thead>
+        <tbody id="table-data">
+        </tbody>
+      </table>
+  </div>
+  <script src="./js/api-service.js"></script>
+  <script src="./js/table_data.js"></script>
+  <script src="./js/forecast.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>
